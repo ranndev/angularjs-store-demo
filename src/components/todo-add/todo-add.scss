@@ -1,0 +1,56 @@
+todo-add {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  form {
+    display: flex;
+    width: 100%;
+  }
+
+  input {
+    appearance: none;
+    width: 100%;
+    padding: 0 .75rem;
+    padding-right: calc(.75rem + 50px);
+    height: 50px;
+    border: none;
+    border-radius: .2rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    svg {
+      fill: #2f9577;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 .15rem rgba(#2f9577, .25);
+    }
+
+    &:hover {
+      background-color: #f7f7f7;
+    }
+
+    &:disabled {
+      svg {
+        fill: rgba(#333, .2);
+      }
+    }
+
+    &:active {
+      background-color: #f3f3f3;
+    }
+  }
+}

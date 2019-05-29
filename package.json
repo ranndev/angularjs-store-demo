@@ -1,0 +1,39 @@
+{
+  "name": "angularjs-store-demo",
+  "version": "0.0.1",
+  "description": "AngularJS Store Demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --env=development",
+    "build": "webpack --env=production",
+    "lint:fix": "tslint --fix --project tsconfig.json",
+    "lint": "tslint --project tsconfig.json"
+  },
+  "author": "Rannie Peralta",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "clean-webpack-plugin": "^2.0.2",
+    "css-loader": "^2.1.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5",
+    "webpack": "^4.32.1",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "dependencies": {
+    "@types/angular": "^1.6.54",
+    "@types/jquery": "^3.3.29",
+    "angular": "1.7.8",
+    "angularjs-store": "^4.0.3-rc",
+    "jquery": "^3.4.1"
+  }
+}

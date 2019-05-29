@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "mrmlnc.vscode-scss",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+  ],
+  "unwantedRecommendations": [
+    "eg2.tslint",
+  ]
+}

@@ -1,0 +1,15 @@
+<button
+  ng-class="$ctrl.activeFilter === 'all' && 'active'"
+  ng-click="$ctrl.changeFilter('all')">
+  All
+</button>
+<button
+  ng-class="$ctrl.activeFilter === 'active' && 'active'"
+  ng-click="$ctrl.changeFilter('active')">
+  Active
+</button>
+<button
+  ng-class="$ctrl.activeFilter === 'completed' && 'active'"
+  ng-click="$ctrl.changeFilter('completed')">
+  Completed
+</button>

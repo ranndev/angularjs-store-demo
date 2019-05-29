@@ -1,0 +1,76 @@
+todos {
+  display: flex;
+  flex-direction: column;
+
+  .todo-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 0 .75rem;
+    box-shadow: 0 1px #ddd;
+
+    &:hover {
+      button {
+        visibility: visible;
+      }
+    }
+  }
+
+  label {
+    flex: none;
+    display: flex;
+    margin-right: .75rem;
+    cursor: pointer;
+
+    svg {
+      fill: #2f9577;
+    }
+  }
+
+  span.label,
+  input.label {
+    flex: auto;
+  }
+
+  span.label {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &.completed {
+      text-decoration: line-through;
+    }
+  }
+
+  input.label {
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  input[type="checkbox"] {
+    position: fixed;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  button {
+    flex: none;
+    margin-left: .75rem;
+    outline: none;
+
+    svg {
+      fill: rgba(#333, .4);
+      transform: scale(.8);
+    }
+
+    &:hover {
+      svg {
+        fill: rgba(#333, .8);
+      }
+    }
+    // visibility: hidden;
+    // transition: visibility 0s .2s;
+  }
+}

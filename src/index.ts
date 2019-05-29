@@ -1,7 +1,6 @@
 import './index.scss';
 
 import angular from 'angular';
-import 'jquery';
 
 import './components';
 import './filters';

@@ -1,4 +1,3 @@
-const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -31,17 +30,10 @@ const commonConfig = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        jquery: {
-          chunks: 'all',
-          name: 'jquery',
-          test: /jquery/,
-          priority: 2,
-        },
         angular: {
           chunks: 'all',
           name: 'angular',
           test: /angular/,
-          priority: 1,
         },
       },
     },

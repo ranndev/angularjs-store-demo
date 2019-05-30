@@ -1,7 +1,7 @@
 import template from './todo-add.html';
 import './todo-add.scss';
 
-import Todo from '../../models/Todo';
+import Todo from '../../models/todo';
 import { TodosStore } from '../../stores/todos';
 
 export class TodoAddController implements ng.IComponentController {

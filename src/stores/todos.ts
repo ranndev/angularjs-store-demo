@@ -1,5 +1,5 @@
 import NgStore from 'angularjs-store';
-import Todo from '../models/Todo';
+import Todo from '../models/todo';
 import TodosFilter from '../models/todos-filter';
 
 export interface TodosState {

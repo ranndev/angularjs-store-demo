@@ -1,7 +1,7 @@
 import template from './todos.html';
 import './todos.scss';
 
-import Todo from '../../models/Todo';
+import Todo from '../../models/todo';
 import TodosFilter from '../../models/todos-filter';
 import { TodosStore } from '../../stores/todos';
 

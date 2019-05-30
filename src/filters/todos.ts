@@ -1,4 +1,4 @@
-import Todo from '../models/Todo';
+import Todo from '../models/todo';
 import TodosFilter from '../models/todos-filter';
 
 const filter: ng.Injectable<ng.FilterFactory> = function todos($filter: ng.IFilterService) {

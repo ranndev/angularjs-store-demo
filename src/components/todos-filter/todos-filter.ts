@@ -4,11 +4,12 @@ import template from './todos-filter.html';
 import './todos-filter.scss';
 
 export class TodosFilterController implements ng.IComponentController {
-  private activeFilter: TodosFilter;
+  public static $inject = ['$scope', 'Todos'];
+  public activeFilter: TodosFilter;
 
   constructor(
-    private $scope: ng.IScope,
-    private Todos: TodosStore,
+    public $scope: ng.IScope,
+    public Todos: TodosStore,
   ) {
     this.Todos.hook('CHANGE_FILTER', ({ activeFilter }) => {
       this.activeFilter = activeFilter;

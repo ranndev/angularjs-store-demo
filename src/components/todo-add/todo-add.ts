@@ -5,6 +5,7 @@ import Todo from '../../models/todo';
 import { TodosStore } from '../../stores/todos';
 
 export class TodoAddController implements ng.IComponentController {
+  public static $inject = ['$scope', 'Todos'];
   public items: Todo[];
   public label: string = '';
   public form: ng.IFormController & {

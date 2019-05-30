@@ -11,12 +11,13 @@ export type EditableTodo = Todo & {
 };
 
 export class TodosController implements ng.IComponentController {
-  private items: Todo[];
-  private activeFilter: TodosFilter;
+  public static $inject = ['$scope', 'Todos'];
+  public items: Todo[];
+  public activeFilter: TodosFilter;
 
   constructor(
-    private $scope: ng.IScope,
-    private Todos: TodosStore,
+    public $scope: ng.IScope,
+    public Todos: TodosStore,
   ) {
     this.Todos.hook('*', ({ activeFilter, items }) => {
       this.items = items;

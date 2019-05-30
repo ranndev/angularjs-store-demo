@@ -1,7 +1,7 @@
 import Todo from '../models/todo';
 import TodosFilter from '../models/todos-filter';
 
-const filter: ng.Injectable<ng.FilterFactory> = function todos($filter: ng.IFilterService) {
+const todos: ng.Injectable<ng.FilterFactory> = ($filter: ng.IFilterService) => {
   return (items: Todo[], activeFilter: TodosFilter) => {
     const filterredTodos = items.filter((item) => (
       activeFilter === 'all' ||
@@ -16,4 +16,6 @@ const filter: ng.Injectable<ng.FilterFactory> = function todos($filter: ng.IFilt
   };
 };
 
-export default filter;
+todos.$inject = ['$filter'];
+
+export default todos;

@@ -1,23 +1,23 @@
 import TodosFilter from '../../models/todos-filter';
-import { TodosStore } from '../../stores/todos';
+import { TodosStore } from '../../stores/todos-store';
 import template from './todos-filter.html';
 import './todos-filter.scss';
 
 export class TodosFilterController implements ng.IComponentController {
-  public static $inject = ['$scope', 'Todos'];
+  public static $inject = ['$scope', 'todosStore'];
   public activeFilter: TodosFilter;
 
   constructor(
     public $scope: ng.IScope,
-    public Todos: TodosStore,
+    public todosStore: TodosStore,
   ) {
-    this.Todos.hook('CHANGE_FILTER', ({ activeFilter }) => {
+    this.todosStore.hook('CHANGE_FILTER', ({ activeFilter }) => {
       this.activeFilter = activeFilter;
     }).destroyOn(this.$scope);
   }
 
   public changeFilter(filter: TodosFilter) {
-    this.Todos.dispatch('CHANGE_FILTER', { activeFilter: filter });
+    this.todosStore.dispatch('CHANGE_FILTER', { activeFilter: filter });
   }
 }
 

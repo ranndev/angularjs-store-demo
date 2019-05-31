@@ -3,7 +3,7 @@ import './todos.scss';
 
 import Todo from '../../models/todo';
 import TodosFilter from '../../models/todos-filter';
-import { TodosStore } from '../../stores/todos';
+import { TodosStore } from '../../stores/todos-store';
 
 export type EditableTodo = Todo & {
   $editing: boolean;
@@ -11,22 +11,22 @@ export type EditableTodo = Todo & {
 };
 
 export class TodosController implements ng.IComponentController {
-  public static $inject = ['$scope', 'Todos'];
+  public static $inject = ['$scope', 'todosStore'];
   public items: Todo[];
   public activeFilter: TodosFilter;
 
   constructor(
     public $scope: ng.IScope,
-    public Todos: TodosStore,
+    public todosStore: TodosStore,
   ) {
-    this.Todos.hook('*', ({ activeFilter, items }) => {
+    this.todosStore.hook('*', ({ activeFilter, items }) => {
       this.items = items;
       this.activeFilter = activeFilter;
     }).destroyOn(this.$scope);
   }
 
   public toggleItem(selectedTodo: Todo) {
-    this.Todos.dispatch('TOGGLE_ITEM', ({ items }) => {
+    this.todosStore.dispatch('TOGGLE_ITEM', ({ items }) => {
       for (const item of items) {
         if (item.label === selectedTodo.label) {
           item.completed = selectedTodo.completed;
@@ -44,7 +44,7 @@ export class TodosController implements ng.IComponentController {
   }
 
   public deleteItem(selectedTodo: Todo) {
-    this.Todos.dispatch('DELETE_ITEM', ({ items }) => ({
+    this.todosStore.dispatch('DELETE_ITEM', ({ items }) => ({
       items: items.filter((item) => item.label !== selectedTodo.label),
     }));
   }
@@ -70,7 +70,7 @@ export class TodosController implements ng.IComponentController {
     if (event.key === 'Escape') {
       selectedTodo.$editing = false;
     } else if (event.key === 'Enter') {
-      this.Todos.dispatch('EDIT_ITEM', ({ items }) => ({
+      this.todosStore.dispatch('EDIT_ITEM', ({ items }) => ({
         items: items.map((todo) => {
           if (todo.label === selectedTodo.label) {
             todo.label = selectedTodo.$label;

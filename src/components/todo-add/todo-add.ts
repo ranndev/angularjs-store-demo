@@ -2,10 +2,10 @@ import template from './todo-add.html';
 import './todo-add.scss';
 
 import Todo from '../../models/todo';
-import { TodosStore } from '../../stores/todos';
+import { TodosStore } from '../../stores/todos-store';
 
 export class TodoAddController implements ng.IComponentController {
-  public static $inject = ['$scope', 'Todos'];
+  public static $inject = ['$scope', 'todosStore'];
   public items: Todo[];
   public label: string = '';
   public form: ng.IFormController & {
@@ -16,15 +16,15 @@ export class TodoAddController implements ng.IComponentController {
 
   constructor(
     public $scope: ng.IScope,
-    public Todos: TodosStore,
+    public todosStore: TodosStore,
   ) {
-    this.Todos.hook(['ADD_TODO', 'DELETE_ITEM'], ({ items }) => {
+    this.todosStore.hook(['ADD_TODO', 'DELETE_ITEM'], ({ items }) => {
       this.items = items;
     }).destroyOn($scope);
   }
 
   public addTodo(label: string = this.label) {
-    this.Todos.dispatch('ADD_TODO', ({ items }) => ({
+    this.todosStore.dispatch('ADD_TODO', ({ items }) => ({
       items: [...items, {
         completed: false,
         dateCompleted: null,

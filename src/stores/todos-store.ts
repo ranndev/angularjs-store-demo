@@ -17,9 +17,12 @@ export type TodosActions = [
 
 export type TodosStore = NgStore<TodosState, TodosActions>;
 
-export default function Todos(): TodosStore {
+export default function todosStore(): TodosStore {
+  // Load TodosStore data from local storage
   const lastItems = JSON.parse(window.localStorage.getItem('TodosStore_items') || '[]');
   const lastActiveFilter = window.localStorage.getItem('TodoStore_activeFilter') || 'all';
+
+  // Create a new store using the data from local storage.
   const store = new NgStore<TodosState, TodosActions>({
     activeFilter: lastActiveFilter as TodosFilter,
     items: (lastItems as Todo[]).map((item) => {

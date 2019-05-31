@@ -1,6 +1,6 @@
 import angular from 'angular';
-import Todos from './todos';
+import todosStore from './todos-store';
 
 angular
   .module('app.stores', [])
-  .service('Todos', Todos);
+  .service('todosStore', todosStore);

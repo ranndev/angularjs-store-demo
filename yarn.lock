@@ -268,10 +268,10 @@ angular@1.7.8:
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.8.tgz#b77ede272ce1b261e3be30c1451a0b346905a3c9"
   integrity sha512-wtef/y4COxM7ZVhddd7JtAAhyYObq9YXKar9tsW7558BImeVYteJiTxCKeJOL45lJ/+7B4wrAC49j8gTFYEthg==
 
-angularjs-store@^4.0.4-rc:
-  version "4.0.4-rc"
-  resolved "https://registry.yarnpkg.com/angularjs-store/-/angularjs-store-4.0.4-rc.tgz#fb71a0344ea44dc7f92d08659be914dc4b1140ef"
-  integrity sha512-phdc6ogl7wN30HAIqyBwDi5VaNOWGFgRCM5bKXS7i0ltfvRe7g8BccIqNkvKBrs/knUZcAoQiHU//E5UfMcn5A==
+angularjs-store@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/angularjs-store/-/angularjs-store-4.0.0.tgz#ea5e83aa1e225b01f8018f82fa5a4e3ac39ad8e5"
+  integrity sha512-Sj2LX93sWKpr0Xtg4oPCxAWKmUdz+8/ssBU0RXgHnAgXXeIIZO1q6oftSwwZqjoWoHPH2Odu4TZy+uENm20h9w==
   dependencies:
     "@types/angular" "^1.6.54"
 

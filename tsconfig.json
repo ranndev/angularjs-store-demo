@@ -6,7 +6,7 @@
     "removeComments": true,
     "sourceMap": true,
     "strictNullChecks": true,
-    "target": "es3"
+    "target": "es3",
   },
   "include": [
     "./src"

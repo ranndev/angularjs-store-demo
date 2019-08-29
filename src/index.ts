@@ -1,7 +1,5 @@
 import './index.scss';
 
-import angular from 'angular';
-
 import './components';
 import './filters';
 import './stores';

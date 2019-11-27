@@ -13,26 +13,26 @@
   "author": "Rannie Peralta",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
+    "autoprefixer": "^9.7.2",
     "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
-    "sass-loader": "^7.3.1",
+    "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
-    "tslint": "^5.19.0",
-    "typescript": "^3.5.3",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0"
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "@types/angular": "^1.6.56",
-    "angular": "1.7.9",
-    "angularjs-store": "^4.0.1"
+    "@ranndev/angularjs-store": "^4.0.5",
+    "@types/angular": "^1.6.57",
+    "angular": "1.7.9"
   }
 }

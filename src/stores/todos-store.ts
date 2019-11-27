@@ -1,4 +1,4 @@
-import NgStore from 'angularjs-store';
+import NgStore from '@ranndev/angularjs-store';
 import Todo from '../models/todo';
 import TodosFilter from '../models/todos-filter';
 

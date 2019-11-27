@@ -1,0 +1,21 @@
+name: sched-build
+
+on:
+  schedule:
+    - cron:  '5 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: npm ci, lint, and build
+        run: |
+          npm ci
+          npm run lint
+          npm run build
